@@ -1,6 +1,9 @@
 package com.example.carros.api;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,12 +12,23 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController {
 
     @GetMapping
-    public String hello() {
-        return "Hello Spring boot";
+    public String get() {
+        return "Get Spring boot";
     }
 
-    @GetMapping("/teste")
-    public String teste() {
-        return "Hello Spring teste";
+    @PostMapping
+    public String post() {
+        return "Post Spring boot";
     }
+
+    @PutMapping
+    public String put() {
+        return "Put Spring boot";
+    }
+
+    @DeleteMapping
+    public String delete() {
+        return "Delete Spring boot";
+    }
+    
 }
