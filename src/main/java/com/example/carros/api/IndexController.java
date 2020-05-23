@@ -12,4 +12,9 @@ public class IndexController {
     public String hello() {
         return "Hello Spring boot";
     }
+
+    @GetMapping("/teste")
+    public String teste() {
+        return "Hello Spring teste";
+    }
 }
